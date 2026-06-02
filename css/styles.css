@@ -166,18 +166,18 @@ h1, h2, h3 { font-family: var(--font-display); font-weight: 500; line-height: 1.
 .nav-toggle[aria-expanded="true"] span::after { top:0; transform: rotate(-45deg); }
 
 /* 7. HERO ------------------------------------------------------------------ */
-.hero { position: relative; padding-top: clamp(48px, 7vw, 96px); padding-bottom: clamp(56px, 8vw, 120px); overflow: hidden; }
+.hero { position: relative; padding-top: clamp(40px, 5.5vw, 80px); padding-bottom: clamp(44px, 6vw, 92px); overflow: hidden; }
 .hero__inner { position: relative; z-index: 2; display: grid; grid-template-columns: 1.05fr .95fr; gap: clamp(32px, 5vw, 72px); align-items: center; }
-.hero__claim { margin-bottom: 26px; }
-.hero h1 { font-size: clamp(2.9rem, 7.2vw, 5.7rem); }
+.hero__claim { margin-bottom: 18px; }
+.hero h1 { font-size: clamp(2.7rem, 6.4vw, 5.1rem); line-height: .96; }
 .hero h1 .grad-text { display: inline-block; }
-.hero__sub { margin-top: 26px; max-width: 30ch; color: var(--ink-dim); font-size: clamp(1.05rem, 1.5vw, 1.28rem); }
-.hero__cta { display: flex; flex-wrap: wrap; gap: 14px; margin-top: 38px; }
-.hero__micro { margin-top: 26px; font-size: .86rem; color: var(--ink-mut); display:flex; align-items:center; gap:10px; }
+.hero__sub { margin-top: 20px; max-width: 32ch; color: var(--ink-dim); font-size: clamp(1.05rem, 1.5vw, 1.28rem); }
+.hero__cta { display: flex; flex-wrap: wrap; gap: 14px; margin-top: 28px; }
+.hero__micro { margin-top: 20px; font-size: .86rem; color: var(--ink-mut); display:flex; align-items:center; gap:10px; }
 .hero__micro::before { content:""; width:14px;height:11px; background: var(--grad-brand); clip-path: polygon(50% 0,100% 100%,0 100%); flex:none; }
 
 /* Hero stat strip */
-.hero__stats { display: grid; grid-template-columns: repeat(3, auto); gap: clamp(20px,4vw,48px); margin-top: 52px; padding-top: 30px; border-top: 1px solid var(--line); width: fit-content; }
+.hero__stats { display: grid; grid-template-columns: repeat(3, auto); gap: clamp(20px,4vw,48px); margin-top: 38px; padding-top: 24px; border-top: 1px solid var(--line); width: fit-content; }
 .hstat .n { font-family: var(--font-display); font-size: clamp(1.5rem,2.4vw,2.1rem); line-height: 1; }
 .hstat .l { margin-top: 8px; font-size: .78rem; color: var(--ink-mut); letter-spacing: .04em; }
 

@@ -182,18 +182,45 @@ h1, h2, h3 { font-family: var(--font-display); font-weight: 500; line-height: 1.
 .hstat .l { margin-top: 8px; font-size: .78rem; color: var(--ink-mut); letter-spacing: .04em; }
 
 /* Hero visual — brand isotype + floating glass triangles */
-.hero__visual { position: relative; aspect-ratio: 1/1; display: grid; place-items: center; }
-.hero__mark { width: min(78%, 460px); filter: drop-shadow(0 30px 80px rgba(0,197,229,.28)); animation: floaty 9s ease-in-out infinite; z-index: 2; }
-.glow { position: absolute; border-radius: 50%; filter: blur(70px); opacity: .55; z-index: 1; }
-.glow--cyan   { width: 46%; height: 46%; background: var(--cyan);   top: 6%;  left: 8%; }
-.glow--violet { width: 44%; height: 44%; background: var(--violet); bottom: 10%; left: 26%; opacity:.5; }
-.glow--green  { width: 40%; height: 40%; background: var(--green);  bottom: 8%; right: 8%; opacity:.45; }
-.tri { position: absolute; clip-path: polygon(50% 0,100% 100%,0 100%); opacity:.9; z-index: 2; }
-.tri--a { width: 64px; height: 56px; top: 4%; right: 16%; background: var(--grad-cv); animation: floaty 7s ease-in-out infinite; }
-.tri--b { width: 40px; height: 35px; bottom: 14%; left: 6%; background: var(--grad-cg); animation: floaty 8.5s ease-in-out .6s infinite; }
-.tri--c { width: 30px; height: 26px; top: 26%; left: 2%; background: var(--green); opacity:.8; animation: floaty 6.5s ease-in-out .3s infinite; }
+.hero__visual { position: relative; aspect-ratio: 1/1; display: grid; place-items: center;
+  /* parallax offsets driven by JS (pointer) */
+  --px: 0px; --py: 0px; }
+.hero__visual > * { will-change: transform; }
+.hero__mark { width: min(78%, 460px); filter: drop-shadow(0 30px 80px rgba(0,197,229,.28));
+  animation: floaty 9s ease-in-out infinite; z-index: 3;
+  transform: translate3d(var(--px), var(--py), 0); }
 
-@keyframes floaty { 0%,100%{ transform: translateY(0) } 50%{ transform: translateY(-14px) } }
+/* Conic halo behind the isotype */
+.hero__halo { position:absolute; width: 86%; height: 86%; border-radius: 50%; z-index: 1;
+  background: conic-gradient(from 0deg, var(--cyan), var(--violet), var(--green), var(--cyan));
+  filter: blur(34px); opacity: .38; animation: spin 22s linear infinite;
+  transform: translate3d(var(--px), var(--py), 0); }
+/* Thin rotating ring (masked to an outline) */
+.hero__ring { position:absolute; width: 70%; height: 70%; border-radius: 50%; z-index: 2;
+  background: conic-gradient(from 90deg, transparent 0 60%, rgba(255,255,255,.55) 75%, transparent 88%);
+  -webkit-mask: radial-gradient(circle, transparent 0 calc(50% - 2px), #000 calc(50% - 1px) 50%, transparent calc(50% + 1px));
+          mask: radial-gradient(circle, transparent 0 calc(50% - 2px), #000 calc(50% - 1px) 50%, transparent calc(50% + 1px));
+  opacity:.5; animation: spin 14s linear infinite reverse;
+  transform: translate3d(var(--px), var(--py), 0); }
+
+.glow { position: absolute; border-radius: 50%; filter: blur(70px); opacity: .55; z-index: 0;
+  transform: translate3d(var(--px), var(--py), 0); }
+.glow--cyan   { width: 46%; height: 46%; background: var(--cyan);   top: 6%;  left: 8%;  animation: breathe 7s ease-in-out infinite; }
+.glow--violet { width: 44%; height: 44%; background: var(--violet); bottom: 10%; left: 26%; opacity:.5;  animation: breathe 9s ease-in-out 1s infinite; }
+.glow--green  { width: 40%; height: 40%; background: var(--green);  bottom: 8%; right: 8%; opacity:.45; animation: breathe 8s ease-in-out .5s infinite; }
+
+.tri { position: absolute; clip-path: polygon(50% 0,100% 100%,0 100%); opacity:.9; z-index: 4;
+  filter: drop-shadow(0 8px 18px rgba(0,0,0,.35));
+  transform: translate3d(var(--px), var(--py), 0); }
+.tri--a { width: 64px; height: 56px; top: 4%; right: 16%; background: var(--grad-cv); animation: floatSpin 7s ease-in-out infinite; }
+.tri--b { width: 40px; height: 35px; bottom: 14%; left: 6%; background: var(--grad-cg); animation: floatSpin 8.5s ease-in-out .6s infinite; }
+.tri--c { width: 30px; height: 26px; top: 26%; left: 2%; background: var(--green); opacity:.8; animation: floaty 6.5s ease-in-out .3s infinite; }
+.tri--d { width: 22px; height: 19px; top: 12%; left: 22%; background: var(--cyan); opacity:.7; animation: floatSpin 9.5s ease-in-out .9s infinite reverse; }
+
+@keyframes floaty { 0%,100%{ transform: translate3d(var(--px),var(--py),0) } 50%{ transform: translate3d(var(--px), calc(var(--py) - 14px), 0) } }
+@keyframes floatSpin { 0%,100%{ transform: translate3d(var(--px),var(--py),0) rotate(0deg) } 50%{ transform: translate3d(var(--px), calc(var(--py) - 16px), 0) rotate(8deg) } }
+@keyframes breathe { 0%,100%{ transform: translate3d(var(--px),var(--py),0) scale(1); opacity:.42 } 50%{ transform: translate3d(var(--px),var(--py),0) scale(1.12); opacity:.6 } }
+@keyframes spin { to { transform: translate3d(var(--px),var(--py),0) rotate(360deg) } }
 
 /* Ambient background field (whole page top) */
 .bg-field { position: absolute; inset: 0; z-index: 0; pointer-events: none; overflow: hidden; }

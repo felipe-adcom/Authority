@@ -116,6 +116,33 @@
     counters.forEach((c) => cio.observe(c));
   }
 
+  /* ---- Hero pointer parallax ---- */
+  const heroVisual = $(".hero__visual");
+  const finePointer = window.matchMedia("(pointer: fine)").matches;
+  if (heroVisual && !prefersReduced && finePointer) {
+    const layers = $$("[data-par]", heroVisual);
+    const hero = $(".hero");
+    let raf = 0, tx = 0, ty = 0;
+    const apply = () => {
+      raf = 0;
+      layers.forEach((el) => {
+        const p = parseFloat(el.dataset.par) || 0;
+        el.style.setProperty("--px", (tx * p).toFixed(1) + "px");
+        el.style.setProperty("--py", (ty * p).toFixed(1) + "px");
+      });
+    };
+    const onMove = (e) => {
+      const r = heroVisual.getBoundingClientRect();
+      // pointer offset from visual center, clamped, scaled to a travel budget
+      tx = Math.max(-1, Math.min(1, (e.clientX - (r.left + r.width / 2)) / (r.width / 2))) * 26;
+      ty = Math.max(-1, Math.min(1, (e.clientY - (r.top + r.height / 2)) / (r.height / 2))) * 26;
+      if (!raf) raf = requestAnimationFrame(apply);
+    };
+    const reset = () => { tx = 0; ty = 0; if (!raf) raf = requestAnimationFrame(apply); };
+    (hero || heroVisual).addEventListener("pointermove", onMove, { passive: true });
+    (hero || heroVisual).addEventListener("pointerleave", reset, { passive: true });
+  }
+
   /* ---- Form validation + success ---- */
   const form = $("#diagForm");
   const card = $("#formCard");

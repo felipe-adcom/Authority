@@ -236,19 +236,25 @@ h1, h2, h3 { font-family: var(--font-display); font-weight: 500; line-height: 1.
 /* 8. SECTIONS -------------------------------------------------------------- */
 
 /* Logo divider strip (under hero) */
-.proof-strip { border-top: 1px solid var(--line); border-bottom: 1px solid var(--line); }
-.proof-strip .container { display: flex; align-items: center; gap: clamp(20px,5vw,64px); flex-wrap: wrap; padding-block: 26px; }
-.proof-strip p { font-size: .82rem; letter-spacing: .04em; color: var(--ink-mut); max-width: 220px; }
-.proof-strip .terms { display:flex; flex-wrap:wrap; gap: 12px 14px; }
-.term-pill { font-size: .8rem; color: var(--ink-dim); border:1px solid var(--line); padding: 8px 14px; border-radius: 100px; background: rgba(255,255,255,.02); }
+.proof-strip { border-top: 1px solid var(--line); border-bottom: 1px solid var(--line); background: rgba(255,255,255,.012); }
+.proof-strip .container { display: flex; flex-direction: column; align-items: center; gap: 18px; padding-block: 30px; text-align: center; }
+.proof-strip__label { font-size: .74rem; letter-spacing: .18em; text-transform: uppercase; color: var(--ink-mut); display: inline-flex; align-items: center; gap: 10px; }
+.proof-strip__label::before { content:""; width:13px; height:10px; background: var(--grad-brand); clip-path: polygon(50% 0,100% 100%,0 100%); flex:none; }
+.proof-strip .terms { display:flex; flex-wrap:wrap; justify-content:center; gap: 10px 12px; max-width: 1120px; }
+.term-pill { font-size: .82rem; color: var(--ink-dim); border:1px solid var(--line-2); padding: 8px 16px; border-radius: 100px; background: rgba(255,255,255,.03); transition: color .2s, border-color .2s, background .2s; }
+.term-pill:hover { color:#fff; border-color: rgba(255,255,255,.22); background: rgba(255,255,255,.06); }
 
 /* Manifesto */
 .manifesto h2 { font-size: clamp(1.9rem, 4.4vw, 3.4rem); max-width: 16ch; }
 .manifesto__lead { font-size: clamp(1.5rem,3vw,2.2rem); line-height:1.18; font-family:var(--font-display); max-width: 20ch; }
-.manifesto__body { display:grid; grid-template-columns: 1.1fr 1fr; gap: clamp(28px,5vw,72px); margin-top: 44px; align-items:end; }
-.manifesto__steps { list-style:none; display:flex; flex-direction:column; gap:14px; }
-.manifesto__steps li { display:flex; gap:14px; align-items:flex-start; color: var(--ink-dim); font-size:1.02rem; }
-.manifesto__steps li::before { content:""; margin-top:.45em; width:13px;height:10px;flex:none; background: var(--grad-cg); clip-path: polygon(50% 0,100% 100%,0 100%); }
+.manifesto__body { display:grid; grid-template-columns: 1fr 1fr; gap: clamp(28px,5vw,64px); margin-top: 48px; align-items:stretch; }
+.manifesto__panel { background: var(--surface); border:1px solid var(--line); border-radius: var(--r-lg); padding: clamp(26px,3vw,40px); display:flex; flex-direction:column; gap:22px; }
+.manifesto__panel-label { font-size:.74rem; letter-spacing:.16em; text-transform:uppercase; color: var(--ink-mut); }
+.manifesto__steps { list-style:none; display:flex; flex-direction:column; gap:0; position:relative; }
+.manifesto__steps li { position:relative; display:flex; gap:16px; align-items:flex-start; color: var(--ink-dim); font-size:1.06rem; line-height:1.4; padding:14px 0; border-top:1px solid var(--line); }
+.manifesto__steps li:first-child { border-top:0; padding-top:0; }
+.manifesto__steps li:last-child { padding-bottom:0; }
+.manifesto__steps li::before { content:""; margin-top:.38em; width:14px;height:11px;flex:none; background: var(--grad-cg); clip-path: polygon(50% 0,100% 100%,0 100%); }
 .manifesto__close { margin-top: 36px; font-family:var(--font-display); font-size: clamp(1.2rem,2vw,1.6rem); line-height:1.25; max-width: 28ch; }
 
 /* Generic card */

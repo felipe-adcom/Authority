@@ -268,7 +268,10 @@ h1, h2, h3 { font-family: var(--font-display); font-weight: 500; line-height: 1.
 .clients { margin-top: 46px; }
 .clients__label { font-size:.74rem; letter-spacing:.16em; text-transform:uppercase; color: var(--ink-mut); }
 .clients__row { display:grid; grid-template-columns: repeat(5,1fr); gap:14px; margin-top:18px; }
-.client-slot { height: 64px; border:1px dashed var(--line-2); border-radius: var(--r-sm); display:grid; place-items:center; color: var(--ink-mut); font-size:.78rem; background: rgba(255,255,255,.015); }
+.client-slot { height: 72px; border:1px solid var(--line-2); border-radius: var(--r-sm); display:grid; place-items:center; background: rgba(255,255,255,.04); padding: 10px 16px; transition: background .2s; }
+.client-slot:hover { background: rgba(255,255,255,.07); }
+.client-slot img { max-width: 100%; max-height: 44px; width: auto; height: auto; object-fit: contain; filter: grayscale(1) brightness(1.6); transition: filter .25s; }
+.client-slot:hover img { filter: grayscale(0) brightness(1); }
 
 /* Services accordion */
 .services-list { margin-top: 50px; border-top:1px solid var(--line); }

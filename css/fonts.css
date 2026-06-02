@@ -1,0 +1,22 @@
+/* =========================================================================
+   AUTHORITY — Typography
+   -------------------------------------------------------------------------
+   Display  : NewBlack Typeface Medium  (official brand face, self-hosted)
+              Full Latin + Spanish accents + complete digit set.
+   Body/UI  : Inter (loaded in <head> via Google Fonts) with a robust
+              system-font fallback, for executive legibility.
+
+   NOTE: "Nekst SemiBold" (also part of the brand kit) is intentionally NOT
+   declared here. The supplied file is a Fontspring DEMO that renders a "DEMO"
+   watermark on key glyphs (4, +, -, %, ·) and lacks Spanish accents — unusable
+   for our metrics (160.000+, 243x, CPA -25%). Swap in the licensed full
+   version and add an @font-face below if you want it back in the display stack.
+   ========================================================================= */
+
+@font-face {
+  font-family: "NewBlack";
+  src: url("../assets/fonts/NewBlack-Medium.ttf") format("truetype");
+  font-weight: 400 600;
+  font-style: normal;
+  font-display: swap;
+}

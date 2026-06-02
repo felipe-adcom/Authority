@@ -1,0 +1,45 @@
+Informe del paquete
+
+-----------------------------------------------------------------------------
+Documento:
+Nombre: logo autority curvas.ai
+Modo de color: Color RGB
+Perfil de color: Adobe RGB (1998)
+Unidades de regla: puntos
+Dimensiones de la mesa de trabajo: 1302,1382 pt x 732,3055 pt
+Mostrar im‡genes en modo contorno: Desactivado
+Resaltar fuentes sustituidas: Desactivado
+Resaltar glifos sustituidos: Desactivado
+Conservar capacidad de edici—n de texto
+Simular papel de color: Desactivado
+
+-----------------------------------------------------------------------------
+Objetos de tintas planas:
+PANTONE 350 C (Lab)
+PANTONE 354 C (Lab)
+PANTONE Warm Gray 1 C (Lab)
+
+-----------------------------------------------------------------------------
+Fuentes no disponibles:Ninguno
+
+-----------------------------------------------------------------------------
+Fuentes protegidas no empaquetadas:
+Unbounded Regular (Adobe Fonts)
+NasalizationRg-Regular (Adobe Fonts)
+
+-----------------------------------------------------------------------------
+Fuentes:
+NewBlack Typeface Medium (OTF)
+FSP DEMO - Nekst SemiBold Regular (OTF)
+
+-----------------------------------------------------------------------------
+Fuentes incrustadas:
+Ninguno
+
+-----------------------------------------------------------------------------
+Enlaces no disponibles:
+Ninguno
+
+-----------------------------------------------------------------------------
+Im‡genes enlazadas:
+Ninguno

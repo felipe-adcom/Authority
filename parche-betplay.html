@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Únete al Parche – BetPlay es Gana</title>
+  <meta name="description" content="Regístrate para ser el primero en enterarte de nuestros próximos eventos, sorteos y experiencias exclusivas." />
+  <link rel="icon" type="image/png" href="favicon.png" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:ital,wght@0,700;0,800;0,900;1,700;1,800&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="css/parche-betplay.css" />
+</head>
+<body class="pb-page">
+
+  <!-- ===== HEADER ===== -->
+  <header class="pb-header">
+    <div class="pb-container">
+      <nav class="pb-nav" aria-label="Principal">
+        <div class="pb-brand">
+          <img src="assets/brand/clients/BetPlay-logo.png"    alt="BetPlay" class="pb-logo pb-logo--betplay" />
+          <span class="pb-brand-sep" aria-hidden="true">|</span>
+          <img src="assets/brand/clients/logoGanaSecundario.svg" alt="Gana" class="pb-logo pb-logo--gana" />
+        </div>
+        <ul class="pb-nav-links" role="list">
+          <li><a href="#eventos"    class="pb-nav-a pb-nav-a--active">Próximos Eventos</a></li>
+          <li><a href="#beneficios" class="pb-nav-a">Beneficios</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main id="pb-main">
+
+    <!-- ===== HERO ===== -->
+    <section class="pb-hero" aria-labelledby="pb-hero-title">
+      <div class="pb-hero-bg" aria-hidden="true"></div>
+      <div class="pb-container pb-hero-container">
+        <div class="pb-hero-grid">
+
+          <!-- Copy -->
+          <div class="pb-hero-copy">
+            <h1 id="pb-hero-title" class="pb-hero-title">
+              ÚNETE<br>AL PARCHE<br>BETPLAY ES GANA
+            </h1>
+            <p class="pb-hero-sub">
+              Regístrate para ser el primero en enterarte de
+              nuestros próximos eventos, sorteos y experiencias
+              exclusivas en tu <span class="pb-ciudad-crossed">ciudad.</span>
+            </p>
+            <span class="pb-city" aria-label="Ciudad: Medellín">medellin</span>
+          </div>
+
+          <!-- Form card -->
+          <div class="pb-hero-form-wrap">
+            <div class="pb-form-card">
+              <h2 class="pb-form-title">Únete al Parche</h2>
+              <form class="pb-form" id="parcheForm" novalidate>
+                <div class="pb-field">
+                  <input type="text"  id="pb-nombre"   name="nombre"   placeholder="Nombre completo"  required aria-required="true" autocomplete="name" />
+                </div>
+                <div class="pb-field">
+                  <input type="text"  id="pb-cedula"   name="cedula"   placeholder="Cédula"           required aria-required="true" inputmode="numeric" />
+                </div>
+                <div class="pb-field">
+                  <input type="email" id="pb-email"    name="email"    placeholder="Correo electrónico" required aria-required="true" autocomplete="email" />
+                </div>
+                <div class="pb-field">
+                  <input type="tel"   id="pb-telefono" name="telefono" placeholder="Número telefónico" required aria-required="true" autocomplete="tel" inputmode="tel" />
+                </div>
+                <div class="pb-checkbox-row">
+                  <input type="checkbox" id="pb-politica" name="politica" required aria-required="true" />
+                  <label for="pb-politica">Acepto política de tratamiento de datos y T&amp;C (Grupo Bedrock)</label>
+                </div>
+                <button type="submit" class="pb-btn-submit">Registrarme ahora</button>
+              </form>
+              <div class="pb-form-success" role="status" aria-live="polite">
+                <svg viewBox="0 0 48 48" fill="none" class="pb-success-icon" aria-hidden="true"><circle cx="24" cy="24" r="22" stroke="#1a4a8a" stroke-width="2.5"/><path d="M14 24l8 8 12-14" stroke="#1a4a8a" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                <p class="pb-success-msg">¡Registro exitoso! Pronto te contactaremos.</p>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== EVENTOS ACTIVOS ===== -->
+    <section class="pb-events" id="eventos" aria-labelledby="pb-events-title">
+      <div class="pb-container">
+        <h2 id="pb-events-title" class="pb-section-title">Eventos Activos del Mes</h2>
+        <div class="pb-events-grid">
+
+          <article class="pb-event-card">
+            <div class="pb-event-img pb-event-img--mundial" role="img" aria-label="Experiencia mundialista"></div>
+            <div class="pb-event-body">
+              <h3 class="pb-event-name">Experiencia mundialista</h3>
+              <a href="#pb-main" class="pb-btn-event">Regístrate y gana</a>
+            </div>
+          </article>
+
+          <article class="pb-event-card">
+            <div class="pb-event-img pb-event-img--polla" role="img" aria-label="La Polla BetPlay"></div>
+            <div class="pb-event-body">
+              <h3 class="pb-event-name">La polla</h3>
+              <a href="#pb-main" class="pb-btn-event">Regístrate y gana</a>
+            </div>
+          </article>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== POR QUÉ REGISTRARTE ===== -->
+    <section class="pb-why" id="beneficios" aria-labelledby="pb-why-title">
+      <div class="pb-container">
+        <h2 id="pb-why-title" class="pb-why-title">¿Por qué registrarte?</h2>
+        <div class="pb-benefits-grid">
+
+          <div class="pb-benefit">
+            <!-- Crown / VIP icon -->
+            <svg class="pb-icon" viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+              <path d="M10 44h44" stroke="#fff" stroke-width="3" stroke-linecap="round"/>
+              <path d="M12 26l10 12 10-18 10 18 10-12" stroke="#fff" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+              <rect x="10" y="44" width="44" height="8" rx="2" stroke="#fff" stroke-width="3"/>
+            </svg>
+            <span class="pb-benefit-label">Acceso VIP</span>
+          </div>
+
+          <div class="pb-benefit">
+            <!-- Gift / Sorteos icon -->
+            <svg class="pb-icon" viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+              <rect x="10" y="28" width="44" height="28" rx="2" stroke="#fff" stroke-width="3"/>
+              <path d="M10 28h44v-8H10v8z" stroke="#fff" stroke-width="3" stroke-linejoin="round"/>
+              <line x1="32" y1="20" x2="32" y2="56" stroke="#fff" stroke-width="3"/>
+              <path d="M22 20c0-5 4-9 10-7s10 0 10-5" stroke="#fff" stroke-width="3" stroke-linecap="round"/>
+            </svg>
+            <span class="pb-benefit-label">Sorteos exclusivos</span>
+          </div>
+
+          <div class="pb-benefit">
+            <!-- Ticket / Bonos icon -->
+            <svg class="pb-icon" viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+              <rect x="6" y="20" width="52" height="24" rx="3" stroke="#fff" stroke-width="3"/>
+              <circle cx="32" cy="32" r="8" stroke="#fff" stroke-width="3"/>
+              <path d="M6 26h6M52 26h6M6 38h6M52 38h6" stroke="#fff" stroke-width="3" stroke-linecap="round"/>
+            </svg>
+            <span class="pb-benefit-label">Bonos Betplay</span>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ===== FOOTER ===== -->
+  <footer class="pb-footer">
+    <div class="pb-container pb-footer-inner">
+      <div class="pb-footer-brand">
+        <img src="assets/brand/clients/BetPlay-logo.png"       alt="BetPlay" class="pb-footer-logo pb-footer-logo--betplay" />
+        <span class="pb-footer-sep" aria-hidden="true">|</span>
+        <img src="assets/brand/clients/logoGanaSecundario.svg"  alt="Gana"    class="pb-footer-logo pb-footer-logo--gana" />
+      </div>
+      <p class="pb-footer-copy">
+        © 2026 Grupo Bedrock | BetPlay | Gana. Todos los derechos reservados.
+        | <a href="#">Políticas de Privacidad</a>
+        | <a href="#">Términos y Condiciones</a>.
+      </p>
+    </div>
+  </footer>
+
+  <script src="js/parche-betplay.js" defer></script>
+</body>
+</html>
